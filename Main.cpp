@@ -4,6 +4,10 @@
  #include <fstream>
  using namespace std;
 
+ void printFunction(int* heap, int area, int indent);
+ void deleteFunction(int* heap, int deletor);
+ void heapSort(int* heap, int size);
+
  int main() {
 
    char input;
@@ -70,5 +74,48 @@
    }
 
    
-   
+  }
+
+//void printFunction(int* heap, int area, int indent);
+
+ void printFunction(int* heap, int area, int indent) {
+
+   if(heap[area] == 0) {
+     return;
+   }
+   indent +=10;
+
+   printFunction(heap, area*2+1, indent);
+
+   cout << "\n" << endl;
+
+   for(int i = 10; i < indent; i++) {
+
+     cout << " ";
+     
+   }
+
+   cout << heap[area] << "\n";
+
+   print func(heap, location*2+2, space);
+  
  }
+
+ void deleteFunction(int* heap, int deletor) {
+
+   for(int = 0; i < 100; i++) {
+
+     if(heap[i] == deletor) {
+
+       heap[i] = 0;
+       break;
+       
+     }
+     
+   }
+
+   //heap sort here
+  
+ }
+
+ 
