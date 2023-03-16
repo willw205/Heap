@@ -110,9 +110,10 @@
        
      } else if (strcmp(askUser, "DELETE") == 0) {
 
-       int deleteNumber = 0;
-       cin >> deleteNumber;
-       deleteFunction(heap, deleteNumber);
+        int deleteNum = 0;
+	cin >> deleteNum;
+	deleteFunction(heap, deleteNum);
+       
        
      } else if (strcmp(askUser, "PRINT") == 0) {
 
@@ -158,7 +159,7 @@
 
  //helps to delete a number
 
- void deleteFunction(int* heap, int deletor) {
+void deleteFunction(int* heap, int deletor) {
 
    for(int i = 0; i < 100; i++) {
 
@@ -171,8 +172,8 @@
      
    }
 
-   //heap sort here
-  
+   heapSort(heap, 100);
+ 
  }
 
  //heapify function/heapsort function code was given through https://www.programiz.com/dsa/heap-data-structure
